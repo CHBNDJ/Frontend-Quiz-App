@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/cfd5fcf59b.js" crossorigin="anonymous"></script>
+  <link href="./fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <script defer src="script.js" type="module"></script>
+  
+  <title>Frontend Mentor | Frontend quiz app</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="selected-subject" id="subject">
+      <div class="card-img" id="logo-container">
+        <img id="header-logo" src="">
+      </div>
+      <p id="header-text"></p>
+    </div>
+    <label class="switch-mode">
+      <img src="./images/icon-sun-dark.svg" alt="Sun Icon" id="sun-icon">
+      <input type="checkbox" id="switch-button">
+      <img src="./images/icon-moon-dark.svg" alt="Moon Icon" id="moon-icon">
+    </label>
+  </header>
+  
+  
+  <!--- Quiz HomePage-->
+
+  <main>
+  
+  <article class="menu-container" id="main-menu">
+    <section class="quiz-title">
+      <h1>Welcome to the <br>
+        <strong>Frontend Quiz!</strong>
+      </h1>
+      <p>Pick a subject to get started.</p>
+    </section>
+    <section class="subjects">
+        <button id="HTML" class="subject-type"  data-logo="./images/icon-html.svg" data-text="HTML">
+          <div class="card-img html-bg">
+            <img src="./images/icon-html.svg">
+          </div>
+          <p>HTML</p>
+        </button>
+        <button id="CSS" class="subject-type" data-logo="./images/icon-css.svg" data-text="CSS">
+          <div class="card-img css-bg">
+            <img src="./images/icon-css.svg">
+          </div>
+          <p>CSS</p>
+        </button>
+        <button id="Javascript" class="subject-type" data-logo="./images/icon-js.svg" data-text="Javascript">
+          <div class="card-img javascript-bg">
+            <img src="./images/icon-js.svg">
+          </div>
+          <p>Javascript</p>
+        </button>
+        <button id="Accessibility" class="subject-type" data-logo="./images/icon-accessibility.svg" data-text="Accessibility">
+          <div class="card-img accessibility-bg">
+            <img src="./images/icon-accessibility.svg">
+          </div>
+          <p>Accessibility</p>
+        </button>
+    </section>
+  </article>
+
+
+    <!--Quiz-->
+
+    <article class="quiz-container display" id="quiz-container">
+      <section class="quiz-question">
+        <div class="question-content">
+         <p class="question-number" id="question-number"></p>  
+         <h2 class="question-text" id="question-text"></h2>
+        </div>
+        <div class="progress-container">
+          <progress id="progress-bar" value="0" max="100"></progress>
+      </div>
+      </section>
+
+      <section class="quiz-options">
+       <div class="button-options" id="options-container">
+          <button class="quiz-option" id="optionA">
+           <div class="content-option">
+            <p>A</p>
+           </div>
+            <p class="choice-text option-text"></p>
+            <i class="fa-regular fa-circle-check display"></i>
+            <i class="far fa-circle-xmark display"></i>
+          </button>
+        
+          <button class="quiz-option" id="optionB">
+           <div class="content-option">
+            <p>B</p>
+           </div>
+           <p class="choice-text option-text"></p>
+           <i class="fa-regular fa-circle-check display"></i>
+           <i class="far fa-circle-xmark display"></i>
+          </button>
+        
+          <button class="quiz-option" id="optionC">
+           <div class="content-option">
+            <p>C</p>
+           </div>
+           <p class="choice-text option-text"></p>
+           <i class="fa-regular fa-circle-check display"></i>
+           <i class="far fa-circle-xmark display"></i>
+          </button>
+       
+          <button class="quiz-option" id="optionD">
+           <div class="content-option">
+            <p>D</p>
+           </div>
+           <p class="choice-text option-text"></p>
+           <i class="fa-regular fa-circle-check display"></i>
+           <i class="far fa-circle-xmark display"></i>
+          </button>
+        </div>
+
+        <div class="button-submit">     
+         <button id="submit-button">
+          <p>Submit Answer</p>
+         </button>
+        </div>
+
+        <div class="error-message">
+          <div class="icon-error">
+           <i class="fas fa-xmark"></i>
+          </div>
+          <p id="error-message-text"></p>
+        </div>
+     
+        <div class="button-next display">     
+         <button id="next-button">
+          <p>Next Question</p>
+         </button>
+        </div>
+
+      </section>
+    </article>
+
+
+     <!--Results--> 
+
+      <article class="quiz-completed visibility" id="quiz-completed" >
+        <section class="result-title">
+          <h2>Quiz completed</h2>
+          <p id="score-text">You scored...</p>
+        </section>
+        <section class="result-container">
+          <div class="result-card">
+            <div class="selected-subject">
+            <div class="card-img" id="logo-score">
+             <img id="score-logo" src="">
+            </div>
+            <p id="score-text-logo"></p>
+          </div>
+           <div class="result-number">
+            <span id="score-number"></span>
+            <p> out of 10</p>
+          </div>
+          </div>
+          <button id="play-again-button">
+            <p>Play Again</p>
+          </button>
+        </section>
+      </article>
+    </main>
+
+</body>
+</html>
